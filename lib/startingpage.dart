@@ -1,3 +1,4 @@
+import 'package:activego/singpassloginpage.dart';
 import 'package:flutter/material.dart';
 
 class StartingPage extends StatelessWidget {
@@ -57,7 +58,13 @@ class StartingPage extends StatelessWidget {
               const SizedBox(height: 10),
               ElevatedButton(
                 style: buttonStyle,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SingPassLoginPage()),
+                  );
+                },
                 child: Column(children: [
                   Image.asset(
                     "images/singpass_logo.png",
