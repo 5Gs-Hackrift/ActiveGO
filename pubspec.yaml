@@ -95,3 +95,4 @@ flutter:
     - family: DMSans
       fonts:
         - asset: fonts/DMSans-Regular.ttf
+        - asset: fonts/DMSans-Bold.ttf
