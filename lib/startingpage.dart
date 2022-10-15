@@ -45,10 +45,10 @@ class StartingPage extends StatelessWidget {
                       color: Colors.white, fontFamily: 'DMSans', fontSize: 20),
                 ),
               ),
-              const Align(
-                alignment: Alignment.centerLeft,
+              const Padding(
+                padding: EdgeInsets.only(right: 120),
                 child: Text(
-                  '                  Sign in with:',
+                  'Sign in with:',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'DMSans', fontSize: 15),
