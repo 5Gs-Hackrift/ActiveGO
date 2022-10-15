@@ -5,6 +5,13 @@ class StartingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+        backgroundColor: Colors.white,
+        minimumSize: const Size(250, 70),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(18))),
+        textStyle: const TextStyle(fontSize: 20));
+
     return Container(
         constraints: const BoxConstraints.expand(),
         decoration: const BoxDecoration(
@@ -17,8 +24,8 @@ class StartingPage extends StatelessWidget {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              Align(
+            children: [
+              const Align(
                 alignment: Alignment.center,
                 child: Text(
                   'ActiveGO',
@@ -29,15 +36,56 @@ class StartingPage extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
               ),
-              Align(
+              const Align(
                 alignment: Alignment.center,
                 child: Text(
-                  'Get active, meet friends and earn points!',
+                  'Get active, meet friends and earn points!\n\n',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white, fontFamily: 'DMSans', fontSize: 20),
                 ),
               ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '                  Sign in with:',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Colors.white, fontFamily: 'DMSans', fontSize: 15),
+                ),
+              ),
+              const SizedBox(height: 10),
+              ElevatedButton(
+                style: buttonStyle,
+                onPressed: () {},
+                child: Column(children: [
+                  Image.asset(
+                    "images/singpass_logo.png",
+                    width: 130,
+                  ),
+                ]),
+              ),
+              const SizedBox(height: 10),
+              const Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'OR',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Colors.white, fontFamily: 'DMSans', fontSize: 15),
+                ),
+              ),
+              const SizedBox(height: 10),
+              ElevatedButton(
+                  style: buttonStyle,
+                  onPressed: () {},
+                  child: const Text(
+                    'Healthy365',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'DMSans',
+                        fontWeight: FontWeight.bold),
+                  )),
             ],
           ),
         )));
