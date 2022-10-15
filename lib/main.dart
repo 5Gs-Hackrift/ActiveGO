@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'color_builder.dart';
+import 'signin_login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +12,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final ButtonStyle style = TextButton.styleFrom(
+      foregroundColor: Theme.of(context).colorScheme.onPrimary,
+    );
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -22,9 +27,15 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: ColorBuilder.buildMaterialColor(const Color(0xFFFF6079)),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+          appBar: AppBar(
+              title: const Text('Sign In',
+                  style: TextStyle(
+                      fontFamily: 'DMSans', fontWeight: FontWeight.bold)),
+              centerTitle: true),
+          body: const SignIn()),
     );
   }
 }
