@@ -53,7 +53,7 @@ class _SignIn extends State<SignIn> {
                       'Get access to your Healthpoints and data with an all new experience.',
                       style: TextStyle(
                           fontFamily: 'DMSans',
-                          fontSize: 15,
+                          fontSize: 16,
                           height: 2,
                           fontWeight: FontWeight.w500),
                     )),
@@ -93,6 +93,7 @@ class _SignIn extends State<SignIn> {
                   ),
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     const Divider(
                       thickness: 0,
@@ -113,28 +114,24 @@ class _SignIn extends State<SignIn> {
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                         )),
-                    Container(
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: const Color(0xFFFFE4E8),
-                          minimumSize: const Size(200, 50),
-                          shape: const RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(5))),
-                        ),
-                        child: const Text(
-                          'Sign Up',
-                          style: TextStyle(
-                              color: const Color(0xFFFF6079),
-                              fontFamily: 'DMSans',
-                              fontSize: 17,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        onPressed: () {},
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFFFE4E8),
+                        minimumSize: const Size(200, 50),
+                        shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(5))),
                       ),
-                    )
+                      onPressed: () {},
+                      child: const Text(
+                        'Sign Up',
+                        style: TextStyle(
+                            color: Color(0xFFFF6079),
+                            fontFamily: 'DMSans',
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.center,
                 ),
               ],
             )));
