@@ -97,3 +97,4 @@ flutter:
       fonts:
         - asset: fonts/DMSans-Regular.ttf
         - asset: fonts/DMSans-Bold.ttf
+        - asset: fonts/DMSans-Medium.ttf
